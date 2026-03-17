@@ -53,3 +53,6 @@ To get a local copy of this project:
 1. Click the **"Download"** or **"Export"** button in the top-right corner of the platform.
 2. Extract the ZIP file.
 3. Follow the "Getting Started" steps above.
+
+---
+*Last deployed: {new Date().toLocaleString()}*
