@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "homepage": "https://prabanandan.github.io/portfolio",
+  "homepage": "https://Prabanandan-Porfolia.github.io/portfolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
