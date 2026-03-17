@@ -63,7 +63,7 @@ const Hero = () => {
               {/* Image Container */}
               <div className="absolute inset-0 flex items-center justify-center overflow-hidden rounded-full border-8 border-accent/30">
                 <img 
-                  src="https://api.dyad.sh/api/v1/projects/67d823976666666666666666/files/pasted-image-2026-03-17T13-28-24-728Z.png" 
+                  src="/my-photo.jpg" 
                   alt="Prabanandan Anandhamurugan"
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 z-10"
                   onError={(e) => {
