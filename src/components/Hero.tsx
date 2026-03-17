@@ -63,7 +63,7 @@ const Hero = () => {
               {/* Image Container */}
               <div className="absolute inset-0 flex items-center justify-center overflow-hidden rounded-full border-8 border-accent/30">
                 <img 
-                  src="/my-photo.jpg" 
+                  src="/Portfolio/my-photo.jpg" 
                   alt="Prabanandan Anandhamurugan"
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 z-10"
                   onError={(e) => {
