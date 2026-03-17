@@ -1,75 +1,93 @@
 "use client";
 
 import React from 'react';
-import { Mail, Phone, MapPin, Download, Github, Linkedin } from 'lucide-react';
+import { Download, Github, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
     <section className="pt-32 pb-20 px-4 overflow-hidden">
-      <div className="max-w-5xl mx-auto relative">
-        {/* Decorative background element */}
-        <div className="absolute -top-24 -right-24 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl -z-10" />
-        <div className="absolute -bottom-24 -left-24 w-72 h-72 bg-orange-600/10 rounded-full blur-3xl -z-10" />
-
-        <div className="flex flex-col gap-8 items-start">
+      <div className="max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left Content */}
           <motion.div 
-            initial={{ opacity: 0, x: -20 }}
+            initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            className="space-y-6 w-full"
+            transition={{ duration: 0.6 }}
+            className="space-y-8 order-2 lg:order-1"
           >
             <div className="space-y-4">
-              <Badge variant="secondary" className="bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300 px-4 py-1.5 rounded-full text-sm font-semibold border-none">
-                ✨ Available for Java Backend Roles
-              </Badge>
-              <h1 className="text-5xl md:text-7xl font-black tracking-tight text-foreground leading-[1.1]">
-                PRABANANDAN <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-600">
-                  ANANDHAMURUGAN
-                </span>
+              <p className="text-xl font-medium text-muted-foreground">Hi I am</p>
+              <h1 className="text-4xl md:text-5xl font-bold text-foreground">
+                Prabanandan Anandhamurugan
               </h1>
-              <p className="text-2xl md:text-3xl font-bold text-muted-foreground">
-                Software Developer — <span className="text-orange-500">JAVA Specialist</span>
-              </p>
+              <h2 className="text-5xl md:text-7xl font-black text-orange-600 tracking-tight">
+                JAVA Specialist
+              </h2>
             </div>
 
-            <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl">
-              Java Software Developer with 2+ years of professional industry experience in backend development, 
-              specializing in <span className="text-foreground font-semibold">Spring Boot</span>, and <span className="text-foreground font-semibold">Microservices</span>. 
-              I build secure, scalable enterprise applications with a strong foundation in modern software architecture.
-            </p>
-
-            <div className="flex flex-wrap gap-3 pt-2">
-              {[
-                { icon: Mail, text: "9807praba@gmail.com" },
-                { icon: Phone, text: "+94 766 577 855" },
-                { icon: MapPin, text: "Nawalapitiya, Sri Lanka" }
-              ].map((item, i) => (
-                <div key={i} className="flex items-center gap-2 text-sm font-medium text-muted-foreground bg-accent/50 backdrop-blur-sm px-4 py-2.5 rounded-xl border border-border/50">
-                  <item.icon className="w-4 h-4 text-orange-500" />
-                  <span>{item.text}</span>
-                </div>
-              ))}
+            <div className="flex gap-4">
+              <Button variant="ghost" size="icon" className="rounded-full bg-accent/50 hover:bg-orange-600 hover:text-white transition-all">
+                <Linkedin className="w-5 h-5" />
+              </Button>
+              <Button variant="ghost" size="icon" className="rounded-full bg-accent/50 hover:bg-orange-600 hover:text-white transition-all">
+                <Github className="w-5 h-5" />
+              </Button>
+              <Button variant="ghost" size="icon" className="rounded-full bg-accent/50 hover:bg-orange-600 hover:text-white transition-all">
+                <Mail className="w-5 h-5" />
+              </Button>
             </div>
 
-            <div className="flex flex-wrap gap-4 pt-6">
-              <Button className="bg-orange-600 hover:bg-orange-700 text-white rounded-2xl px-10 py-7 text-lg font-bold shadow-xl shadow-orange-200 dark:shadow-none transition-all hover:scale-105">
+            <div className="flex flex-wrap gap-4">
+              <Button className="bg-orange-600 hover:bg-orange-700 text-white rounded-xl px-8 py-6 text-lg font-bold shadow-lg shadow-orange-600/20">
                 Hire Me
               </Button>
-              <Button variant="outline" className="rounded-2xl px-8 py-7 text-lg font-bold border-2 gap-2 hover:bg-accent transition-all">
-                <Download className="w-5 h-5" />
+              <Button variant="outline" className="rounded-xl px-8 py-6 text-lg font-bold border-2 border-muted-foreground/20 hover:bg-accent">
                 Download CV
               </Button>
-              <div className="flex items-center gap-2 ml-auto">
-                <Button variant="ghost" size="icon" className="rounded-xl w-12 h-12 hover:bg-orange-50 hover:text-orange-600 dark:hover:bg-orange-950/30">
-                  <Linkedin className="w-6 h-6" />
-                </Button>
-                <Button variant="ghost" size="icon" className="rounded-xl w-12 h-12 hover:bg-orange-50 hover:text-orange-600 dark:hover:bg-orange-950/30">
-                  <Github className="w-6 h-6" />
-                </Button>
+            </div>
+
+            {/* Stats Section */}
+            <div className="grid grid-cols-3 gap-4 pt-8">
+              <div className="p-6 rounded-2xl bg-accent/30 border border-border/50">
+                <p className="text-3xl font-black text-orange-600">2+</p>
+                <p className="text-sm text-muted-foreground font-medium">Years Experience</p>
+              </div>
+              <div className="p-6 rounded-2xl bg-accent/30 border border-border/50">
+                <p className="text-3xl font-black text-orange-600">10+</p>
+                <p className="text-sm text-muted-foreground font-medium">Projects Done</p>
+              </div>
+              <div className="p-6 rounded-2xl bg-accent/30 border border-border/50">
+                <p className="text-3xl font-black text-orange-600">5+</p>
+                <p className="text-sm text-muted-foreground font-medium">Happy Clients</p>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Right Image */}
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+            className="relative order-1 lg:order-2 flex justify-center lg:justify-end"
+          >
+            <div className="relative w-72 h-72 md:w-[450px] md:h-[450px]">
+              {/* Decorative Circle Background */}
+              <div className="absolute inset-0 bg-accent/20 rounded-full scale-110 -z-10" />
+              <div className="absolute inset-0 bg-gradient-to-tr from-orange-600/20 to-transparent rounded-full -z-10" />
+              
+              {/* Image Container */}
+              <div className="w-full h-full rounded-full overflow-hidden border-8 border-accent/50 shadow-2xl">
+                <img 
+                  src="https://raw.githubusercontent.com/Prabanandan-Porfolia/My-Portfolio/main/public/profile.png" 
+                  alt="Prabanandan Anandhamurugan"
+                  className="w-full h-full object-cover object-top grayscale hover:grayscale-0 transition-all duration-500"
+                  onError={(e) => {
+                    // Fallback if the image isn't found yet
+                    e.currentTarget.src = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800";
+                  }}
+                />
               </div>
             </div>
           </motion.div>
