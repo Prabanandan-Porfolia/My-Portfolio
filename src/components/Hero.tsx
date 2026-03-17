@@ -63,12 +63,9 @@ const Hero = () => {
               {/* Image Container */}
               <div className="absolute inset-0 flex items-center justify-center overflow-hidden rounded-full border-8 border-accent/30">
                 <img 
-                  src="/Portfolio/my-photo.jpg" 
+                  src="/my-photo.jpg" 
                   alt="Prabanandan Anandhamurugan"
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 z-10"
-                  onError={(e) => {
-                    e.currentTarget.src = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800";
-                  }}
                 />
               </div>
             </div>
