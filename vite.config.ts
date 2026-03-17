@@ -7,7 +7,7 @@ import path from "path";
 export default defineConfig(() => ({
   // Set base to your repo name for GitHub Pages
   // Example: '/portfolio/'
-  base: "/Prabanandan-Porfolia/",
+  base: "/My-Portfolio/",
   server: {
     host: "::",
     port: 8080,
