@@ -51,7 +51,7 @@ const Experience = () => {
     <section className="py-16 px-4 bg-accent/30">
       <div className="max-w-5xl mx-auto">
         <div className="flex items-center gap-3 mb-12">
-          <div className="p-2 bg-indigo-600 rounded-lg">
+          <div className="p-2 bg-orange-600 rounded-lg">
             <Briefcase className="w-6 h-6 text-white" />
           </div>
           <h2 className="text-3xl font-bold">Professional Experience</h2>
@@ -63,7 +63,7 @@ const Experience = () => {
               <CardHeader className="pb-2">
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-2">
                   <div>
-                    <CardTitle className="text-xl text-indigo-600">{exp.title}</CardTitle>
+                    <CardTitle className="text-xl text-orange-600">{exp.title}</CardTitle>
                     <p className="font-semibold text-foreground mt-1">{exp.company}</p>
                   </div>
                   <div className="flex flex-col md:items-end text-sm text-muted-foreground">
@@ -89,7 +89,7 @@ const Experience = () => {
                     <p className="text-sm font-semibold text-foreground mb-2">Key Projects:</p>
                     <div className="flex flex-wrap gap-2">
                       {exp.projects.map((project, i) => (
-                        <span key={i} className="text-xs bg-indigo-50 text-indigo-600 px-2 py-1 rounded-md border border-indigo-100">
+                        <span key={i} className="text-xs bg-orange-50 dark:bg-orange-950/30 text-orange-600 dark:text-orange-400 px-2 py-1 rounded-md border border-orange-100 dark:border-orange-900/50">
                           {project}
                         </span>
                       ))}
