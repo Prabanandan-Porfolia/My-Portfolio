@@ -3,9 +3,12 @@
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import Section from '@/components/Section';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Github, Layers, Database, ShieldCheck } from 'lucide-react';
+import { ExternalLink, Github, Layers } from 'lucide-react';
+import { ThemeProvider } from 'next-themes';
+import { motion } from 'framer-motion';
 
 const projects = [
   {
@@ -44,79 +47,94 @@ const projects = [
 
 const Projects = () => {
   return (
-    <div className="min-h-screen bg-background">
-      <Navbar />
-      <main className="pt-32 pb-16 px-4">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-16 space-y-4">
-            <h1 className="text-4xl md:text-5xl font-bold">Featured <span className="text-indigo-600">Projects</span></h1>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              A collection of enterprise-grade applications and systems I've developed, 
-              focusing on backend robustness and scalable architecture.
-            </p>
-          </div>
+    <ThemeProvider attribute="class" defaultTheme="light">
+      <div className="min-h-screen bg-background transition-colors duration-300">
+        <Navbar />
+        <main className="pt-32 pb-16 px-4">
+          <div className="max-w-5xl mx-auto">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="text-center mb-16 space-y-4"
+            >
+              <h1 className="text-5xl md:text-6xl font-black tracking-tight">
+                Featured <span className="text-indigo-600">Projects</span>
+              </h1>
+              <p className="text-muted-foreground text-xl max-w-2xl mx-auto">
+                A collection of enterprise-grade applications and systems I've developed, 
+                focusing on backend robustness and scalable architecture.
+              </p>
+            </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {projects.map((project, index) => (
-              <Card key={index} className="overflow-hidden border-border/50 group hover:shadow-xl transition-all duration-300">
-                <div className="relative h-48 overflow-hidden">
-                  <img 
-                    src={project.image} 
-                    alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                    <Badge className="bg-indigo-600 text-white border-none">{project.category}</Badge>
-                  </div>
-                </div>
-                <CardHeader>
-                  <CardTitle className="text-2xl group-hover:text-indigo-600 transition-colors">{project.title}</CardTitle>
-                  <CardDescription className="text-base leading-relaxed">
-                    {project.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-6">
-                  <div className="space-y-3">
-                    <p className="text-sm font-semibold flex items-center gap-2">
-                      <Layers className="w-4 h-4 text-indigo-500" />
-                      Key Features
-                    </p>
-                    <ul className="grid grid-cols-1 gap-1">
-                      {project.features.map((feature, i) => (
-                        <li key={i} className="text-sm text-muted-foreground flex items-center gap-2">
-                          <div className="w-1 h-1 rounded-full bg-indigo-400" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag, i) => (
-                      <Badge key={i} variant="outline" className="bg-accent/50 border-border">
-                        {tag}
-                      </Badge>
-                    ))}
-                  </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {projects.map((project, index) => (
+                <Section key={index}>
+                  <Card className="overflow-hidden border-border/50 group hover:shadow-2xl transition-all duration-500 rounded-3xl bg-card/50 backdrop-blur-sm">
+                    <div className="relative h-56 overflow-hidden">
+                      <img 
+                        src={project.image} 
+                        alt={project.title}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
+                      <div className="absolute bottom-4 left-4">
+                        <Badge className="bg-indigo-600 text-white border-none px-3 py-1 rounded-full">
+                          {project.category}
+                        </Badge>
+                      </div>
+                    </div>
+                    <CardHeader className="space-y-3">
+                      <CardTitle className="text-2xl font-bold group-hover:text-indigo-600 transition-colors">
+                        {project.title}
+                      </CardTitle>
+                      <CardDescription className="text-base leading-relaxed line-clamp-3">
+                        {project.description}
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent className="space-y-6">
+                      <div className="space-y-3">
+                        <p className="text-sm font-bold flex items-center gap-2 text-foreground">
+                          <Layers className="w-4 h-4 text-indigo-500" />
+                          Key Features
+                        </p>
+                        <ul className="grid grid-cols-1 gap-2">
+                          {project.features.map((feature, i) => (
+                            <li key={i} className="text-sm text-muted-foreground flex items-center gap-2">
+                              <div className="w-1.5 h-1.5 rounded-full bg-indigo-400" />
+                              {feature}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      
+                      <div className="flex flex-wrap gap-2">
+                        {project.tags.map((tag, i) => (
+                          <Badge key={i} variant="outline" className="bg-accent/50 border-border/50 rounded-lg px-2.5 py-1">
+                            {tag}
+                          </Badge>
+                        ))}
+                      </div>
 
-                  <div className="flex gap-4 pt-2">
-                    <button className="flex items-center gap-2 text-sm font-medium text-indigo-600 hover:underline">
-                      <Github className="w-4 h-4" />
-                      View Code
-                    </button>
-                    <button className="flex items-center gap-2 text-sm font-medium text-indigo-600 hover:underline">
-                      <ExternalLink className="w-4 h-4" />
-                      Live Demo
-                    </button>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+                      <div className="flex gap-6 pt-4 border-t border-border/50">
+                        <button className="flex items-center gap-2 text-sm font-bold text-indigo-600 hover:text-indigo-700 transition-colors group/btn">
+                          <Github className="w-4 h-4 transition-transform group-hover/btn:-translate-y-0.5" />
+                          View Code
+                        </button>
+                        <button className="flex items-center gap-2 text-sm font-bold text-indigo-600 hover:text-indigo-700 transition-colors group/btn">
+                          <ExternalLink className="w-4 h-4 transition-transform group-hover/btn:-translate-y-0.5" />
+                          Live Demo
+                        </button>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </Section>
+              ))}
+            </div>
           </div>
-        </div>
-      </main>
-      <Footer />
-    </div>
+        </main>
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
 };
 
