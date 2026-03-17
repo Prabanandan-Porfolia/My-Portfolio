@@ -47,24 +47,6 @@ const Hero = () => {
                 Download CV
               </Button>
             </div>
-
-            {/* Stats Section - Horizontal Bar Style */}
-            <div className="inline-flex items-center gap-8 p-6 rounded-2xl bg-accent/20 border border-border/50 backdrop-blur-sm">
-              <div className="space-y-1">
-                <p className="text-2xl font-black text-orange-600">2+</p>
-                <p className="text-xs text-muted-foreground font-bold uppercase tracking-wider">Experiences</p>
-              </div>
-              <div className="w-px h-10 bg-border/50" />
-              <div className="space-y-1">
-                <p className="text-2xl font-black text-orange-600">10+</p>
-                <p className="text-xs text-muted-foreground font-bold uppercase tracking-wider">Project done</p>
-              </div>
-              <div className="w-px h-10 bg-border/50" />
-              <div className="space-y-1">
-                <p className="text-2xl font-black text-orange-600">5+</p>
-                <p className="text-xs text-muted-foreground font-bold uppercase tracking-wider">Happy Clients</p>
-              </div>
-            </div>
           </motion.div>
 
           {/* Right Image */}
