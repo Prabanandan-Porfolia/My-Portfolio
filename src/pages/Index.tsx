@@ -13,8 +13,8 @@ import { ThemeProvider } from 'next-themes';
 
 const Index = () => {
   return (
-    <ThemeProvider attribute="class" defaultTheme="light">
-      <div className="min-h-screen bg-background selection:bg-indigo-100 selection:text-indigo-900 transition-colors duration-300">
+    <ThemeProvider attribute="class" defaultTheme="dark">
+      <div className="min-h-screen bg-background selection:bg-orange-100 selection:text-orange-900 transition-colors duration-300">
         <Navbar />
         <main>
           <Hero />

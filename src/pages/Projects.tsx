@@ -47,7 +47,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <ThemeProvider attribute="class" defaultTheme="light">
+    <ThemeProvider attribute="class" defaultTheme="dark">
       <div className="min-h-screen bg-background transition-colors duration-300">
         <Navbar />
         <main className="pt-32 pb-16 px-4">
@@ -58,7 +58,7 @@ const Projects = () => {
               className="text-center mb-16 space-y-4"
             >
               <h1 className="text-5xl md:text-6xl font-black tracking-tight">
-                Featured <span className="text-indigo-600">Projects</span>
+                Featured <span className="text-orange-600">Projects</span>
               </h1>
               <p className="text-muted-foreground text-xl max-w-2xl mx-auto">
                 A collection of enterprise-grade applications and systems I've developed, 
@@ -78,13 +78,13 @@ const Projects = () => {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
                       <div className="absolute bottom-4 left-4">
-                        <Badge className="bg-indigo-600 text-white border-none px-3 py-1 rounded-full">
+                        <Badge className="bg-orange-600 text-white border-none px-3 py-1 rounded-full">
                           {project.category}
                         </Badge>
                       </div>
                     </div>
                     <CardHeader className="space-y-3">
-                      <CardTitle className="text-2xl font-bold group-hover:text-indigo-600 transition-colors">
+                      <CardTitle className="text-2xl font-bold group-hover:text-orange-600 transition-colors">
                         {project.title}
                       </CardTitle>
                       <CardDescription className="text-base leading-relaxed line-clamp-3">
@@ -94,13 +94,13 @@ const Projects = () => {
                     <CardContent className="space-y-6">
                       <div className="space-y-3">
                         <p className="text-sm font-bold flex items-center gap-2 text-foreground">
-                          <Layers className="w-4 h-4 text-indigo-500" />
+                          <Layers className="w-4 h-4 text-orange-500" />
                           Key Features
                         </p>
                         <ul className="grid grid-cols-1 gap-2">
                           {project.features.map((feature, i) => (
                             <li key={i} className="text-sm text-muted-foreground flex items-center gap-2">
-                              <div className="w-1.5 h-1.5 rounded-full bg-indigo-400" />
+                              <div className="w-1.5 h-1.5 rounded-full bg-orange-400" />
                               {feature}
                             </li>
                           ))}
@@ -116,11 +116,11 @@ const Projects = () => {
                       </div>
 
                       <div className="flex gap-6 pt-4 border-t border-border/50">
-                        <button className="flex items-center gap-2 text-sm font-bold text-indigo-600 hover:text-indigo-700 transition-colors group/btn">
+                        <button className="flex items-center gap-2 text-sm font-bold text-orange-600 hover:text-orange-700 transition-colors group/btn">
                           <Github className="w-4 h-4 transition-transform group-hover/btn:-translate-y-0.5" />
                           View Code
                         </button>
-                        <button className="flex items-center gap-2 text-sm font-bold text-indigo-600 hover:text-indigo-700 transition-colors group/btn">
+                        <button className="flex items-center gap-2 text-sm font-bold text-orange-600 hover:text-orange-700 transition-colors group/btn">
                           <ExternalLink className="w-4 h-4 transition-transform group-hover/btn:-translate-y-0.5" />
                           Live Demo
                         </button>

@@ -34,20 +34,20 @@ const skillGroups = [
 
 const Skills = () => {
   return (
-    <section className="py-16 px-4 bg-zinc-950 text-white">
+    <section className="py-16 px-4 bg-background border-y border-border/50">
       <div className="max-w-5xl mx-auto">
         <h2 className="text-3xl font-bold mb-12 text-center">Technical Expertise</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillGroups.map((group, index) => (
-            <div key={index} className="space-y-4 p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
+            <div key={index} className="space-y-4 p-6 rounded-2xl bg-card border border-border/50 shadow-sm">
               <div className="flex items-center gap-3 mb-2">
                 <group.icon className="w-5 h-5 text-orange-500" />
                 <h3 className="font-bold text-lg">{group.title}</h3>
               </div>
               <div className="flex flex-wrap gap-2">
                 {group.skills.map((skill, i) => (
-                  <Badge key={i} variant="secondary" className="bg-orange-500/20 text-orange-200 hover:bg-orange-500/30 border-none">
+                  <Badge key={i} variant="secondary" className="bg-orange-500/10 text-orange-600 dark:text-orange-400 hover:bg-orange-500/20 border-none">
                     {skill}
                   </Badge>
                 ))}
