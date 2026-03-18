@@ -30,18 +30,16 @@ const Hero = () => {
               <h1 className="text-2xl md:text-3xl font-medium text-muted-foreground tracking-tight">
                 Prabanandan Anandhamurugan
               </h1>
-              <div className="space-y-1">
-                <h2 className="text-4xl md:text-6xl font-black text-foreground tracking-tighter leading-none uppercase">
+              <div className="space-y-2">
+                <h2 className="text-4xl md:text-6xl font-black text-orange-600 tracking-tighter leading-none uppercase">
                   Software Engineer
                 </h2>
-                <h2 className="text-4xl md:text-6xl font-black tracking-tighter leading-none uppercase flex items-center gap-3">
-                  <span className="text-muted-foreground/20">—</span>
-                  <span className="text-orange-600 relative">
+                <div className="relative inline-block">
+                  <h2 className="text-7xl md:text-9xl font-black text-orange-600 tracking-tighter leading-none uppercase">
                     Java
-                    <span className="absolute -bottom-1 left-0 w-full h-2 bg-orange-600/10 -z-10 rounded-full"></span>
-                  </span>
-                  <span className="text-foreground">Specialist</span>
-                </h2>
+                  </h2>
+                  <div className="absolute -bottom-2 left-0 w-full h-4 bg-orange-600/10 rounded-full -z-10" />
+                </div>
               </div>
             </div>
 
