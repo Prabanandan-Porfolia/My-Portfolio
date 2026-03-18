@@ -7,26 +7,21 @@ const Footer = () => {
   return (
     <footer className="bg-background border-t border-border py-12 px-4">
       <div className="max-w-5xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          <div className="flex flex-col justify-center">
-            <h3 className="text-2xl font-bold text-orange-600">Prabanandan.A</h3>
-            <p className="text-sm text-muted-foreground mt-1">Senior Backend Architect</p>
-          </div>
-          
+        <div className="mb-12">
           <div className="space-y-4">
-            <h4 className="font-bold text-lg">Get in Touch</h4>
-            <div className="space-y-3">
+            <h4 className="font-bold text-lg text-orange-600">Get in Touch</h4>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <a href="mailto:9807praba@gmail.com" className="flex items-center gap-3 text-muted-foreground hover:text-orange-600 transition-colors">
-                <Mail className="w-5 h-5" />
+                <Mail className="w-5 h-5 text-orange-500" />
                 <span>9807praba@gmail.com</span>
               </a>
               <div className="flex items-center gap-3 text-muted-foreground">
-                <Phone className="w-5 h-5" />
+                <Phone className="w-5 h-5 text-orange-500" />
                 <span>+94 766 577 855</span>
               </div>
               <div className="flex items-center gap-3 text-muted-foreground">
-                <MapPin className="w-5 h-5" />
-                <span>86, Soysakella road, Nawalapitiya</span>
+                <MapPin className="w-5 h-5 text-orange-500" />
+                <span>86, Soysakella Road, Nawalapitiya</span>
               </div>
             </div>
           </div>
