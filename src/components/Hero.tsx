@@ -35,7 +35,7 @@ const Hero = () => {
                   Software Engineer
                 </h2>
                 <div className="relative inline-block">
-                  <h2 className="text-5xl md:text-7xl font-black text-white tracking-tighter leading-none uppercase">
+                  <h2 className="text-5xl md:text-7xl font-black text-foreground tracking-tighter leading-none uppercase">
                     Java
                   </h2>
                   <div className="absolute -bottom-1 left-0 w-full h-3 bg-orange-600/20 rounded-full -z-10" />
