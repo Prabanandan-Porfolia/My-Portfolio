@@ -16,9 +16,8 @@ const Contact = () => {
     message: ''
   });
 
-  // IMPORTANT: Replace 'YOUR_FORMSPREE_ID' with the ID from your Formspree dashboard
-  // Example: const FORMSPREE_ID = "mjvnbqrq";
-  const FORMSPREE_ID = "9807praba@gmail.com"; // This needs to be a Form ID, not an email
+  // Using the Formspree ID provided by the user
+  const FORMSPREE_ID = "mwvravkj";
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -31,8 +30,6 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // Note: If you haven't set up a Formspree ID yet, this will show the error you saw.
-      // You must create a form at formspree.io to get a valid endpoint.
       const response = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
         method: "POST",
         headers: {
@@ -51,7 +48,7 @@ const Contact = () => {
       }
     } catch (error: any) {
       console.error("Formspree Error:", error);
-      toast.error(error.message || "Something went wrong. Please check your Formspree ID.");
+      toast.error(error.message || "Something went wrong. Please try again later.");
     } finally {
       setIsSubmitting(false);
     }
