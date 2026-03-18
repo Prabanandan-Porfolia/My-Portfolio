@@ -16,6 +16,10 @@ const Contact = () => {
     message: ''
   });
 
+  // IMPORTANT: Replace 'YOUR_FORMSPREE_ID' with the ID from your Formspree dashboard
+  // Example: const FORMSPREE_ID = "mjvnbqrq";
+  const FORMSPREE_ID = "9807praba@gmail.com"; // This needs to be a Form ID, not an email
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
@@ -27,24 +31,27 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // Using Formspree for direct email sending
-      // Replace 'YOUR_FORMSPREE_ID' with your actual Formspree ID (e.g., 'mjvnbqrq')
-      const response = await fetch("https://formspree.io/f/9807praba@gmail.com", {
+      // Note: If you haven't set up a Formspree ID yet, this will show the error you saw.
+      // You must create a form at formspree.io to get a valid endpoint.
+      const response = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          "Accept": "application/json"
         },
         body: JSON.stringify(formData),
       });
 
       if (response.ok) {
-        toast.success("Message sent successfully! I'll get back to you shortly.");
+        toast.success("Message sent! I'll get back to you shortly.");
         setFormData({ name: '', email: '', message: '' });
       } else {
-        throw new Error("Failed to send message");
+        const data = await response.json();
+        throw new Error(data.error || "Failed to send message");
       }
-    } catch (error) {
-      toast.error("Something went wrong. Please try again later.");
+    } catch (error: any) {
+      console.error("Formspree Error:", error);
+      toast.error(error.message || "Something went wrong. Please check your Formspree ID.");
     } finally {
       setIsSubmitting(false);
     }
