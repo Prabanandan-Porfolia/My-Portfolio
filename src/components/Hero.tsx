@@ -43,6 +43,11 @@ const Hero = () => {
               </div>
             </div>
 
+            <p className="text-muted-foreground text-base md:text-lg max-w-xl leading-relaxed">
+              Java Developer passionate about building scalable backend systems and modern web applications, 
+              with a strong focus on clean code and practical solutions.
+            </p>
+
             <div className="flex gap-4">
               <TooltipProvider>
                 <a href={linkedinUrl} target="_blank" rel="noopener noreferrer">
@@ -87,7 +92,7 @@ const Hero = () => {
               {/* Image Container */}
               <div className="absolute inset-0 flex items-center justify-center overflow-hidden rounded-full border-8 border-accent/30 shadow-2xl">
                 <img 
-                  src={`${import.meta.env.BASE_URL}my-photo.jpg`} 
+                  src="/my-photo.jpg" 
                   alt="Prabanandan Anandhamurugan"
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 z-10"
                 />
