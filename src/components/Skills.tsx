@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { Code, Database, Layout, Settings, Server } from 'lucide-react';
+import { Code, Database, Layout, Settings, Server, Layers } from 'lucide-react';
 import { Badge } from "@/components/ui/badge";
 
 const skillGroups = [
@@ -9,6 +9,11 @@ const skillGroups = [
     title: "Backend",
     icon: Server,
     skills: ["Java (17, 21, 25)", "Spring Boot", "Spring Security", "Spring Data JPA", "Hibernate", "REST APIs", "JWT", "Maven"]
+  },
+  {
+    title: "Architecture & System Design",
+    icon: Layers,
+    skills: ["Microservices", "Monolithic", "Service Discovery (Consul, Eureka)", "API Gateway"]
   },
   {
     title: "Databases",
