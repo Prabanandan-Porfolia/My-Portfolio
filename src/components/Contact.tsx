@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import { Mail, Send, MessageSquare } from 'lucide-react';
+import { Mail, Send, MessageSquare, Loader2 } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -9,13 +9,14 @@ import { Card, CardContent } from "@/components/ui/card";
 import { toast } from "sonner";
 
 const Contact = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     if (!formData.name || !formData.email || !formData.message) {
@@ -23,13 +24,30 @@ const Contact = () => {
       return;
     }
 
-    // Constructing the mailto link
-    const subject = encodeURIComponent(`Collaboration Inquiry from ${formData.name}`);
-    const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
-    const mailtoLink = `mailto:9807praba@gmail.com?subject=${subject}&body=${body}`;
-    
-    window.location.href = mailtoLink;
-    toast.success("Opening your email client...");
+    setIsSubmitting(true);
+
+    try {
+      // Using Formspree for direct email sending
+      // Replace 'YOUR_FORMSPREE_ID' with your actual Formspree ID (e.g., 'mjvnbqrq')
+      const response = await fetch("https://formspree.io/f/9807praba@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        toast.success("Message sent successfully! I'll get back to you shortly.");
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        throw new Error("Failed to send message");
+      }
+    } catch (error) {
+      toast.error("Something went wrong. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -39,16 +57,16 @@ const Contact = () => {
           <div className="p-2 bg-orange-600 rounded-lg">
             <MessageSquare className="w-6 h-6 text-white" />
           </div>
-          <h2 className="text-3xl font-bold">Let's Connect</h2>
+          <h2 className="text-3xl font-bold">Strategic Collaboration</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold text-foreground">Building the future of enterprise software</h3>
+            <h3 className="text-2xl font-bold text-foreground">Let's build something exceptional</h3>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              I am always open to discussing high-impact projects, technical challenges, or strategic collaborations. 
-              If you are looking for a dedicated engineer to bring a robust vision to life or want to consult on backend architecture, 
-              reach out and let's start a conversation.
+              I am always open to discussing high-impact projects, technical challenges, or strategic partnerships. 
+              Whether you're looking to scale your backend infrastructure or need an expert perspective on system design, 
+              I'm ready to contribute.
             </p>
             
             <div className="flex items-center gap-4 p-4 bg-background rounded-xl border border-border">
@@ -73,6 +91,7 @@ const Contact = () => {
                       className="bg-accent/50 border-none"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      disabled={isSubmitting}
                     />
                   </div>
                   <div className="space-y-2">
@@ -83,6 +102,7 @@ const Contact = () => {
                       className="bg-accent/50 border-none"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      disabled={isSubmitting}
                     />
                   </div>
                   <div className="space-y-2">
@@ -92,12 +112,26 @@ const Contact = () => {
                       className="min-h-[120px] bg-accent/50 border-none"
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      disabled={isSubmitting}
                     />
                   </div>
                 </div>
-                <Button type="submit" className="w-full bg-orange-600 hover:bg-orange-700 text-white gap-2 py-6 text-lg rounded-xl transition-all">
-                  <Send className="w-4 h-4" />
-                  Send Message
+                <Button 
+                  type="submit" 
+                  className="w-full bg-orange-600 hover:bg-orange-700 text-white gap-2 py-6 text-lg rounded-xl transition-all"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="w-4 h-4 animate-spin" />
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      <Send className="w-4 h-4" />
+                      Send Message
+                    </>
+                  )}
                 </Button>
               </form>
             </CardContent>

@@ -1,9 +1,10 @@
 "use client";
 
 import React from 'react';
-import { Linkedin, Mail } from 'lucide-react';
+import { Linkedin, Mail, ArrowRight } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import {
   Tooltip,
   TooltipContent,
@@ -32,11 +33,11 @@ const Hero = () => {
               </h1>
               <div className="space-y-2">
                 <h2 className="text-4xl md:text-6xl font-black text-orange-600 tracking-tighter leading-none uppercase">
-                  Software Engineer
+                  Senior Backend
                 </h2>
                 <div className="relative inline-block">
                   <h2 className="text-5xl md:text-7xl font-black text-foreground tracking-tighter leading-none uppercase">
-                    Java
+                    Architect
                   </h2>
                   <div className="absolute -bottom-1 left-0 w-full h-3 bg-orange-600/20 rounded-full -z-10" />
                 </div>
@@ -44,8 +45,9 @@ const Hero = () => {
             </div>
 
             <p className="text-muted-foreground text-base md:text-lg max-w-xl leading-relaxed">
-              Java Developer passionate about building scalable backend systems and modern web applications, 
-              with a strong focus on clean code and practical solutions.
+              Specializing in high-performance Java ecosystems and distributed systems. 
+              I design and implement scalable enterprise solutions that drive business growth 
+              and technical excellence.
             </p>
 
             <div className="flex gap-4">
@@ -72,8 +74,14 @@ const Hero = () => {
             </div>
 
             <div className="flex flex-wrap gap-4">
+              <Link to="/projects">
+                <Button className="rounded-xl px-8 py-6 text-lg font-bold bg-orange-600 hover:bg-orange-700 text-white transition-all shadow-lg shadow-orange-200 dark:shadow-none gap-2">
+                  View My Work
+                  <ArrowRight className="w-5 h-5" />
+                </Button>
+              </Link>
               <Button variant="outline" className="rounded-xl px-8 py-6 text-lg font-bold border-2 border-muted-foreground/20 hover:bg-accent bg-transparent transition-all hover:border-orange-600/50">
-                Download CV
+                Download Portfolio
               </Button>
             </div>
           </motion.div>
