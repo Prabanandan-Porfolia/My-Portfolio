@@ -16,7 +16,7 @@ const Hero = () => {
   const email = "9807praba@gmail.com";
 
   return (
-    <section className="pt-32 pb-20 px-4 overflow-hidden min-h-[90vh] flex items-center">
+    <section className="pt-32 pb-20 px-4 overflow-hidden min-h-[85vh] flex items-center">
       <div className="max-w-6xl mx-auto w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Content */}
@@ -24,15 +24,25 @@ const Hero = () => {
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-7 space-y-10 order-2 lg:order-1"
+            className="lg:col-span-7 space-y-8 order-2 lg:order-1"
           >
-            <div className="space-y-2">
-              <h1 className="text-3xl md:text-4xl font-bold text-foreground">
+            <div className="space-y-4">
+              <h1 className="text-2xl md:text-3xl font-medium text-muted-foreground tracking-tight">
                 Prabanandan Anandhamurugan
               </h1>
-              <h2 className="text-5xl md:text-7xl font-black text-orange-600 tracking-tight leading-tight uppercase">
-                Software Engineer <br /> - Java
-              </h2>
+              <div className="space-y-1">
+                <h2 className="text-4xl md:text-6xl font-black text-foreground tracking-tighter leading-none uppercase">
+                  Software Engineer
+                </h2>
+                <h2 className="text-4xl md:text-6xl font-black tracking-tighter leading-none uppercase flex items-center gap-3">
+                  <span className="text-muted-foreground/20">—</span>
+                  <span className="text-orange-600 relative">
+                    Java
+                    <span className="absolute -bottom-1 left-0 w-full h-2 bg-orange-600/10 -z-10 rounded-full"></span>
+                  </span>
+                  <span className="text-foreground">Specialist</span>
+                </h2>
+              </div>
             </div>
 
             <div className="flex gap-4">
@@ -59,7 +69,7 @@ const Hero = () => {
             </div>
 
             <div className="flex flex-wrap gap-4">
-              <Button variant="outline" className="rounded-lg px-10 py-6 text-lg font-bold border-2 border-muted-foreground/20 hover:bg-accent bg-transparent">
+              <Button variant="outline" className="rounded-xl px-8 py-6 text-lg font-bold border-2 border-muted-foreground/20 hover:bg-accent bg-transparent transition-all hover:border-orange-600/50">
                 Download CV
               </Button>
             </div>
@@ -72,12 +82,12 @@ const Hero = () => {
             transition={{ duration: 0.6 }}
             className="lg:col-span-5 relative order-1 lg:order-2 flex justify-center lg:justify-end"
           >
-            <div className="relative w-80 h-80 md:w-[500px] md:h-[500px]">
+            <div className="relative w-72 h-72 md:w-[450px] md:h-[450px]">
               {/* Large Circular Background */}
-              <div className="absolute inset-0 bg-accent/20 rounded-full scale-95" />
+              <div className="absolute inset-0 bg-accent/20 rounded-full scale-95 animate-pulse" />
               
               {/* Image Container */}
-              <div className="absolute inset-0 flex items-center justify-center overflow-hidden rounded-full border-8 border-accent/30">
+              <div className="absolute inset-0 flex items-center justify-center overflow-hidden rounded-full border-8 border-accent/30 shadow-2xl">
                 <img 
                   src="/my-photo.jpg" 
                   alt="Prabanandan Anandhamurugan"
