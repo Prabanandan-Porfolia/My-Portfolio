@@ -68,9 +68,9 @@ const Contact = () => {
           <div className="space-y-6">
             <h3 className="text-2xl font-bold text-foreground">Let's build something exceptional</h3>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              I am always open to discussing high-impact projects, technical challenges, or strategic partnerships. 
+              Reach out to discuss high-impact projects, technical challenges, or strategic partnerships. 
               Whether you're looking to scale your backend infrastructure or need an expert perspective on system design, 
-              I'm ready to contribute.
+              let's connect and build something exceptional.
             </p>
             
             <div className="flex items-center gap-4 p-4 bg-background rounded-xl border border-border">
