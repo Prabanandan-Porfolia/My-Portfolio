@@ -43,28 +43,35 @@ const Projects = () => {
                           alt={project.title}
                           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
-                        <div className="absolute bottom-4 left-4 flex items-center gap-3">
-                          <div className="w-10 h-10 rounded-xl bg-white/90 p-1.5 shadow-lg">
-                            <img src={project.logo} alt="" className="w-full h-full object-contain" />
-                          </div>
-                          <Badge className="bg-orange-600 text-white border-none px-3 py-1 rounded-full">
-                            {project.category}
-                          </Badge>
-                        </div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                       </div>
-                      <CardHeader className="space-y-3">
-                        <CardTitle className="text-2xl font-bold group-hover:text-orange-600 transition-colors">
-                          {project.title}
-                        </CardTitle>
-                        <CardDescription className="text-base leading-relaxed line-clamp-2">
-                          {project.shortDescription}
-                        </CardDescription>
+                      
+                      <CardHeader className="space-y-4">
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-3">
+                            <div className="w-10 h-10 rounded-xl bg-accent/50 p-1.5 border border-border/50 shrink-0">
+                              <img src={project.logo} alt="" className="w-full h-full object-contain" />
+                            </div>
+                            <Badge variant="outline" className="bg-orange-600/10 text-orange-600 border-orange-600/20 rounded-full px-3 py-0.5 text-[10px] uppercase tracking-wider font-bold">
+                              {project.category}
+                            </Badge>
+                          </div>
+                        </div>
+                        
+                        <div className="space-y-2">
+                          <CardTitle className="text-2xl font-bold group-hover:text-orange-600 transition-colors">
+                            {project.title}
+                          </CardTitle>
+                          <CardDescription className="text-base leading-relaxed line-clamp-2">
+                            {project.shortDescription}
+                          </CardDescription>
+                        </div>
                       </CardHeader>
+
                       <CardContent className="space-y-6 mt-auto">
                         <div className="flex flex-wrap gap-2">
                           {project.tags.slice(0, 4).map((tag, i) => (
-                            <Badge key={i} variant="outline" className="bg-accent/50 border-border/50 rounded-lg px-2.5 py-1">
+                            <Badge key={i} variant="secondary" className="bg-accent/50 text-muted-foreground border-none rounded-lg px-2.5 py-1 text-xs">
                               {tag}
                             </Badge>
                           ))}
