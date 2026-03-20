@@ -20,7 +20,6 @@ const Hero = () => {
     <section className="pt-32 pb-20 px-4 overflow-hidden min-h-[85vh] flex items-center">
       <div className="max-w-6xl mx-auto w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          {/* Left Content */}
           <motion.div 
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -86,7 +85,6 @@ const Hero = () => {
             </div>
           </motion.div>
 
-          {/* Right Image */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -94,13 +92,10 @@ const Hero = () => {
             className="lg:col-span-5 relative order-1 lg:order-2 flex justify-center lg:justify-end"
           >
             <div className="relative w-72 h-72 md:w-[450px] md:h-[450px]">
-              {/* Large Circular Background */}
               <div className="absolute inset-0 bg-accent/20 rounded-full scale-95 animate-pulse" />
-              
-              {/* Image Container */}
               <div className="absolute inset-0 flex items-center justify-center overflow-hidden rounded-full border-8 border-accent/30 shadow-2xl">
                 <img 
-                  src="/my-photo.jpg" 
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800" 
                   alt="Prabanandan Anandhamurugan"
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 z-10"
                 />
