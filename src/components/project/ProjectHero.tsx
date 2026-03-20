@@ -12,30 +12,29 @@ interface ProjectHeroProps {
   image: string;
 }
 
-const ProjectHero = ({ title, logo, description, tags, image }: ProjectHeroProps) => {
+const ProjectHero = ({ title, logo, description, tags }: ProjectHeroProps) => {
   return (
-    <section className="pt-24 pb-12 px-4">
+    <section className="pt-32 pb-16 px-4 overflow-hidden">
       <div className="max-w-5xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <motion.div 
-            initial={{ opacity: 0, x: -20 }}
+            initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
-            className="space-y-6"
+            transition={{ duration: 0.6 }}
+            className="lg:col-span-7 space-y-8 order-2 lg:order-1"
           >
-            <div className="flex items-center gap-4">
-              <div className="w-16 h-16 rounded-2xl overflow-hidden bg-accent/50 border border-border/50 p-2 shrink-0">
-                <img src={logo} alt={`${title} logo`} className="w-full h-full object-contain" />
-              </div>
-              <h1 className="text-4xl md:text-5xl font-black tracking-tight text-orange-600 uppercase">
+            <div className="space-y-4">
+              <h1 className="text-4xl md:text-6xl font-black tracking-tight text-orange-600 uppercase leading-none">
                 {title}
               </h1>
+              <p className="text-xl text-muted-foreground leading-relaxed max-w-xl">
+                {description}
+              </p>
             </div>
-            <p className="text-xl text-muted-foreground leading-relaxed">
-              {description}
-            </p>
+
             <div className="flex flex-wrap gap-2">
               {tags.map((tag, i) => (
-                <Badge key={i} variant="secondary" className="bg-accent/50 text-foreground border-none px-3 py-1">
+                <Badge key={i} variant="secondary" className="bg-orange-600/10 text-orange-600 dark:text-orange-400 border-none px-4 py-1.5 text-sm font-medium rounded-full">
                   {tag}
                 </Badge>
               ))}
@@ -43,16 +42,21 @@ const ProjectHero = ({ title, logo, description, tags, image }: ProjectHeroProps
           </motion.div>
           
           <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }}
+            initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="relative aspect-video rounded-3xl overflow-hidden shadow-2xl border border-border/50"
+            transition={{ duration: 0.6 }}
+            className="lg:col-span-5 relative order-1 lg:order-2 flex justify-center lg:justify-end"
           >
-            <img 
-              src={image} 
-              alt={title} 
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+            <div className="relative w-64 h-64 md:w-80 md:h-80">
+              <div className="absolute inset-0 bg-orange-600/10 rounded-full scale-105 animate-pulse" />
+              <div className="absolute inset-0 flex items-center justify-center overflow-hidden rounded-full border-4 border-accent/50 shadow-2xl bg-card p-8">
+                <img 
+                  src={logo} 
+                  alt={`${title} logo`} 
+                  className="w-full h-full object-contain transition-transform duration-700 hover:scale-110"
+                />
+              </div>
+            </div>
           </motion.div>
         </div>
       </div>
