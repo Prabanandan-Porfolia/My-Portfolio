@@ -21,18 +21,18 @@ const ProjectGallery = ({ images }: ProjectGalleryProps) => {
         <CarouselContent>
           {images.map((image, index) => (
             <CarouselItem key={index}>
-              <div className="p-1 space-y-4">
-                <div className="relative aspect-video rounded-2xl overflow-hidden border border-border/50 shadow-lg">
+              <div className="p-1 space-y-3">
+                <div className="relative aspect-video rounded-2xl overflow-hidden border border-border/50 shadow-lg bg-accent/10">
                   <img 
                     src={image.url} 
                     alt={image.caption} 
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="text-center">
-                  <p className="text-sm font-medium text-orange-600 uppercase tracking-wider">
+                <div className="flex justify-center">
+                  <span className="text-[10px] font-bold text-orange-600/80 uppercase tracking-[0.2em] bg-orange-600/5 px-3 py-1 rounded-full border border-orange-600/10">
                     {image.caption}
-                  </p>
+                  </span>
                 </div>
               </div>
             </CarouselItem>

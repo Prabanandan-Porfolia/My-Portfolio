@@ -57,7 +57,8 @@ export const projectsData: ProjectData[] = [
     heroImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
     images: [
       { url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800", caption: "Main Dashboard" },
-      { url: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800", caption: "Analytics View" }
+      { url: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800", caption: "Analytics View" },
+      { url: "https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&fit=crop&q=80&w=800", caption: "System Monitoring" }
     ],
     highlights: [
       "Distributed microservices architecture for high availability",
@@ -92,7 +93,9 @@ export const projectsData: ProjectData[] = [
     tags: ["Java", "Spring Boot", "MongoDB", "JWT", "REST API", "Angular"],
     heroImage: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=1200",
     images: [
-      { url: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=800", caption: "Candidate Pipeline" }
+      { url: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=800", caption: "Candidate Pipeline" },
+      { url: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=800", caption: "Interview Scheduler" },
+      { url: "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=800", caption: "Team Collaboration" }
     ],
     highlights: [
       "Automated candidate screening and ranking",
@@ -127,7 +130,9 @@ export const projectsData: ProjectData[] = [
     tags: ["Java", "Spring Boot", "Docker", "MySQL", "Monolithic"],
     heroImage: "https://images.unsplash.com/photo-1611974717484-3874407defd1?auto=format&fit=crop&q=80&w=1200",
     images: [
-      { url: "https://images.unsplash.com/photo-1611974717484-3874407defd1?auto=format&fit=crop&q=80&w=800", caption: "Workflow Automation" }
+      { url: "https://images.unsplash.com/photo-1611974717484-3874407defd1?auto=format&fit=crop&q=80&w=800", caption: "Workflow Automation" },
+      { url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800", caption: "Financial Reports" },
+      { url: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800", caption: "Compliance Logs" }
     ],
     highlights: [
       "Automated debt recovery workflows",
@@ -162,7 +167,9 @@ export const projectsData: ProjectData[] = [
     tags: ["Java 17", "Spring Boot", "Angular", "PostgreSQL", "Swagger"],
     heroImage: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=1200",
     images: [
-      { url: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=800", caption: "POS Interface" }
+      { url: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=800", caption: "POS Interface" },
+      { url: "https://images.unsplash.com/photo-1586769852044-692d6e3703f0?auto=format&fit=crop&q=80&w=800", caption: "Inventory Management" },
+      { url: "https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&q=80&w=800", caption: "Invoice Generation" }
     ],
     highlights: [
       "Real-time inventory tracking for printing supplies",
