@@ -49,16 +49,16 @@ export const projectsData: ProjectData[] = [
   {
     id: "eilyai-enterprise",
     title: "EilyAI Enterprise Solution",
-    logo: "https://api.dicebear.com/7.x/shapes/svg?seed=eilyai&backgroundColor=f97316",
+    logo: "/eily/logo.png",
     category: "Enterprise Software",
     shortDescription: "A comprehensive enterprise solution system built with microservices architecture.",
     fullDescription: "EilyAI is a high-performance enterprise platform designed to handle complex business operations through a distributed microservices architecture. It focuses on real-time data processing and seamless service communication.",
     tags: ["Java", "Spring Boot", "Microservices", "Kafka", "MySQL", "Docker"],
-    heroImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
+    heroImage: "/eily/hero.png",
     images: [
-      { url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800", caption: "Main Dashboard" },
-      { url: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800", caption: "Analytics View" },
-      { url: "https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&fit=crop&q=80&w=800", caption: "System Monitoring" }
+      { url: "/eily/dashboard.png", caption: "Main Dashboard" },
+      { url: "/eily/analytics.png", caption: "Analytics View" },
+      { url: "/eily/monitoring.png", caption: "System Monitoring" }
     ],
     highlights: [
       "Distributed microservices architecture for high availability",
@@ -86,16 +86,16 @@ export const projectsData: ProjectData[] = [
   {
     id: "talentbase",
     title: "TalentBase",
-    logo: "https://api.dicebear.com/7.x/shapes/svg?seed=talentbase&backgroundColor=f97316",
+    logo: "/talentbase/logo.png",
     category: "HR Tech",
     shortDescription: "A modern recruitment platform designed to streamline the hiring process.",
     fullDescription: "TalentBase is an end-to-end recruitment management system that helps organizations track candidates, manage interviews, and automate the hiring workflow.",
     tags: ["Java", "Spring Boot", "MongoDB", "JWT", "REST API", "Angular"],
-    heroImage: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=1200",
+    heroImage: "/talentbase/hero.png",
     images: [
-      { url: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=800", caption: "Candidate Pipeline" },
-      { url: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=800", caption: "Interview Scheduler" },
-      { url: "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=800", caption: "Team Collaboration" }
+      { url: "/talentbase/pipeline.png", caption: "Candidate Pipeline" },
+      { url: "/talentbase/scheduler.png", caption: "Interview Scheduler" },
+      { url: "/talentbase/collaboration.png", caption: "Team Collaboration" }
     ],
     highlights: [
       "Automated candidate screening and ranking",
@@ -123,16 +123,16 @@ export const projectsData: ProjectData[] = [
   {
     id: "quantrax",
     title: "Quantrax",
-    logo: "https://api.dicebear.com/7.x/shapes/svg?seed=quantrax&backgroundColor=f97316",
+    logo: "/quantrax/logo.png",
     category: "FinTech",
     shortDescription: "Financial software domain application focusing on workflow automation.",
     fullDescription: "Quantrax is a specialized financial tool designed for debt collection and recovery management, focusing on automating complex workflows.",
     tags: ["Java", "Spring Boot", "Docker", "MySQL", "Monolithic"],
-    heroImage: "https://images.unsplash.com/photo-1611974717484-3874407defd1?auto=format&fit=crop&q=80&w=1200",
+    heroImage: "/quantrax/hero.png",
     images: [
-      { url: "https://images.unsplash.com/photo-1611974717484-3874407defd1?auto=format&fit=crop&q=80&w=800", caption: "Workflow Automation" },
-      { url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800", caption: "Financial Reports" },
-      { url: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800", caption: "Compliance Logs" }
+      { url: "/quantrax/workflow.png", caption: "Workflow Automation" },
+      { url: "/quantrax/reports.png", caption: "Financial Reports" },
+      { url: "/quantrax/compliance.png", caption: "Compliance Logs" }
     ],
     highlights: [
       "Automated debt recovery workflows",
@@ -160,16 +160,16 @@ export const projectsData: ProjectData[] = [
   {
     id: "alpha-printers-pos",
     title: "Alpha Printers POS System",
-    logo: "https://api.dicebear.com/7.x/shapes/svg?seed=alphaprinters&backgroundColor=f97316",
+    logo: "/alpha/logo.png",
     category: "Business Management",
     shortDescription: "Complete POS and management system for a printing business.",
     fullDescription: "A custom-built Point of Sale and inventory management system tailored for the specific needs of a high-volume printing shop.",
     tags: ["Java 17", "Spring Boot", "Angular", "PostgreSQL", "Swagger"],
-    heroImage: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=1200",
+    heroImage: "/alpha/hero.png",
     images: [
-      { url: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=800", caption: "POS Interface" },
-      { url: "https://images.unsplash.com/photo-1586769852044-692d6e3703f0?auto=format&fit=crop&q=80&w=800", caption: "Inventory Management" },
-      { url: "https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&q=80&w=800", caption: "Invoice Generation" }
+      { url: "/alpha/pos.png", caption: "POS Interface" },
+      { url: "/alpha/inventory.png", caption: "Inventory Management" },
+      { url: "/alpha/invoice.png", caption: "Invoice Generation" }
     ],
     highlights: [
       "Real-time inventory tracking for printing supplies",
