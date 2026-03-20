@@ -30,7 +30,7 @@ const ProjectGallery = ({ images }: ProjectGalleryProps) => {
                   )}
                 >
                   <img 
-                    src={image.url} 
+                    src={image.url}
                     alt={image.caption} 
                     className={cn(
                       "w-full",

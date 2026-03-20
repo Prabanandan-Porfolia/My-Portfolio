@@ -124,14 +124,14 @@ export const projectsData: ProjectData[] = [
   {
     id: "quantrax",
     title: "Quantrax",
-    logo: "/quantrax/logo.png",
+    logo: `${import.meta.env.BASE_URL}/quantrax/logo1.avif`,
     category: "FinTech",
     shortDescription: "Financial software domain application focusing on workflow automation.",
     fullDescription: "Quantrax is a specialized financial tool designed for debt collection and recovery management, focusing on automating complex workflows.",
     tags: ["Java", "Spring Boot", "Docker", "MySQL", "Monolithic"],
     heroImage: "/quantrax/hero.png",
     images: [
-      { url: "/quantrax/workflow.png", caption: "Workflow Automation", isFullPage: true },
+      { url: `${import.meta.env.BASE_URL}/alpha/login.avif`, caption: "POS Interface", isFullPage: true },,
       { url: "/quantrax/reports.png", caption: "Financial Reports" },
       { url: "/quantrax/compliance.png", caption: "Compliance Logs" }
     ],
@@ -161,16 +161,17 @@ export const projectsData: ProjectData[] = [
   {
     id: "alpha-printers-pos",
     title: "Alpha Printers POS System",
-    logo: "/alpha/logo.png",
+    logo: `${import.meta.env.BASE_URL}/alpha/logo.avif`,
     category: "Business Management",
     shortDescription: "Complete POS and management system for a printing business.",
     fullDescription: "A custom-built Point of Sale and inventory management system tailored for the specific needs of a high-volume printing shop.",
     tags: ["Java 17", "Spring Boot", "Angular", "PostgreSQL", "Swagger"],
-    heroImage: "/alpha/hero.png",
+    heroImage: `${import.meta.env.BASE_URL}/alpha/logo.avif`,
     images: [
-      { url: "/alpha/pos.png", caption: "POS Interface", isFullPage: true },
-      { url: "/alpha/inventory.png", caption: "Inventory Management" },
-      { url: "/alpha/invoice.png", caption: "Invoice Generation" }
+     { url: `${import.meta.env.BASE_URL}/alpha/login.avif`, caption: "Log-In", isFullPage: false },
+      { url: `${import.meta.env.BASE_URL}/alpha/dashboard.avif`, caption: "User Interface", isFullPage: false },
+      { url: `${import.meta.env.BASE_URL}/alpha/sales.avif`, caption: "Invoice Generation", isFullPage: false },
+      { url: `${import.meta.env.BASE_URL}/alpha/reports.avif`, caption: "Reports Generation", isFullPage: false } 
     ],
     highlights: [
       "Real-time inventory tracking for printing supplies",
