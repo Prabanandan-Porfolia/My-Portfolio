@@ -23,6 +23,7 @@ export interface ProjectChallenge {
 export interface ProjectData {
   id: string;
   title: string;
+  logo: string;
   category: string;
   shortDescription: string;
   fullDescription: string;
@@ -43,6 +44,7 @@ export const projectsData: ProjectData[] = [
   {
     id: "eilyai-enterprise",
     title: "EilyAI Enterprise Solution",
+    logo: "https://api.dicebear.com/7.x/shapes/svg?seed=eilyai&backgroundColor=f97316",
     category: "Enterprise Software",
     shortDescription: "A comprehensive enterprise solution system built with microservices architecture.",
     fullDescription: "EilyAI is a high-performance enterprise platform designed to handle complex business operations through a distributed microservices architecture. It focuses on real-time data processing and seamless service communication.",
@@ -78,6 +80,7 @@ export const projectsData: ProjectData[] = [
   {
     id: "talentbase",
     title: "TalentBase",
+    logo: "https://api.dicebear.com/7.x/shapes/svg?seed=talentbase&backgroundColor=f97316",
     category: "HR Tech",
     shortDescription: "A modern recruitment platform designed to streamline the hiring process.",
     fullDescription: "TalentBase is an end-to-end recruitment management system that helps organizations track candidates, manage interviews, and automate the hiring workflow.",
@@ -112,6 +115,7 @@ export const projectsData: ProjectData[] = [
   {
     id: "quantrax",
     title: "Quantrax",
+    logo: "https://api.dicebear.com/7.x/shapes/svg?seed=quantrax&backgroundColor=f97316",
     category: "FinTech",
     shortDescription: "Financial software domain application focusing on workflow automation.",
     fullDescription: "Quantrax is a specialized financial tool designed for debt collection and recovery management, focusing on automating complex workflows.",
@@ -146,6 +150,7 @@ export const projectsData: ProjectData[] = [
   {
     id: "alpha-printers-pos",
     title: "Alpha Printers POS System",
+    logo: "https://api.dicebear.com/7.x/shapes/svg?seed=alphaprinters&backgroundColor=f97316",
     category: "Business Management",
     shortDescription: "Complete POS and management system for a printing business.",
     fullDescription: "A custom-built Point of Sale and inventory management system tailored for the specific needs of a high-volume printing shop.",

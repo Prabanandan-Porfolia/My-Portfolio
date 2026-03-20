@@ -44,7 +44,10 @@ const Projects = () => {
                           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
-                        <div className="absolute bottom-4 left-4">
+                        <div className="absolute bottom-4 left-4 flex items-center gap-3">
+                          <div className="w-10 h-10 rounded-xl bg-white/90 p-1.5 shadow-lg">
+                            <img src={project.logo} alt="" className="w-full h-full object-contain" />
+                          </div>
                           <Badge className="bg-orange-600 text-white border-none px-3 py-1 rounded-full">
                             {project.category}
                           </Badge>

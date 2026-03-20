@@ -50,6 +50,7 @@ const ProjectDetail = () => {
         <main className="pb-16">
           <ProjectHero 
             title={project.title}
+            logo={project.logo}
             description={project.shortDescription}
             tags={project.tags}
             image={project.heroImage}

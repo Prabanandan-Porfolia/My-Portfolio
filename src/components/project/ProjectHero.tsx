@@ -6,12 +6,13 @@ import { motion } from 'framer-motion';
 
 interface ProjectHeroProps {
   title: string;
+  logo: string;
   description: string;
   tags: string[];
   image: string;
 }
 
-const ProjectHero = ({ title, description, tags, image }: ProjectHeroProps) => {
+const ProjectHero = ({ title, logo, description, tags, image }: ProjectHeroProps) => {
   return (
     <section className="pt-24 pb-12 px-4">
       <div className="max-w-5xl mx-auto">
@@ -21,9 +22,14 @@ const ProjectHero = ({ title, description, tags, image }: ProjectHeroProps) => {
             animate={{ opacity: 1, x: 0 }}
             className="space-y-6"
           >
-            <h1 className="text-4xl md:text-5xl font-black tracking-tight text-orange-600 uppercase">
-              {title}
-            </h1>
+            <div className="flex items-center gap-4">
+              <div className="w-16 h-16 rounded-2xl overflow-hidden bg-accent/50 border border-border/50 p-2 shrink-0">
+                <img src={logo} alt={`${title} logo`} className="w-full h-full object-contain" />
+              </div>
+              <h1 className="text-4xl md:text-5xl font-black tracking-tight text-orange-600 uppercase">
+                {title}
+              </h1>
+            </div>
             <p className="text-xl text-muted-foreground leading-relaxed">
               {description}
             </p>
