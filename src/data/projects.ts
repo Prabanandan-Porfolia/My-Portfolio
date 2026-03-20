@@ -23,6 +23,7 @@ export interface ProjectChallenge {
 export interface ProjectImage {
   url: string;
   caption: string;
+  isFullPage?: boolean;
 }
 
 export interface ProjectData {
@@ -56,7 +57,7 @@ export const projectsData: ProjectData[] = [
     tags: ["Java", "Spring Boot", "Microservices", "Kafka", "MySQL", "Docker"],
     heroImage: "/eily/hero.png",
     images: [
-      { url: "/eily/dashboard.png", caption: "Main Dashboard" },
+      { url: "/eily/dashboard.png", caption: "Main Dashboard", isFullPage: true },
       { url: "/eily/analytics.png", caption: "Analytics View" },
       { url: "/eily/monitoring.png", caption: "System Monitoring" }
     ],
@@ -93,7 +94,7 @@ export const projectsData: ProjectData[] = [
     tags: ["Java", "Spring Boot", "MongoDB", "JWT", "REST API", "Angular"],
     heroImage: "/talentbase/hero.png",
     images: [
-      { url: "/talentbase/pipeline.png", caption: "Candidate Pipeline" },
+      { url: "/talentbase/pipeline.png", caption: "Candidate Pipeline", isFullPage: true },
       { url: "/talentbase/scheduler.png", caption: "Interview Scheduler" },
       { url: "/talentbase/collaboration.png", caption: "Team Collaboration" }
     ],
@@ -130,7 +131,7 @@ export const projectsData: ProjectData[] = [
     tags: ["Java", "Spring Boot", "Docker", "MySQL", "Monolithic"],
     heroImage: "/quantrax/hero.png",
     images: [
-      { url: "/quantrax/workflow.png", caption: "Workflow Automation" },
+      { url: "/quantrax/workflow.png", caption: "Workflow Automation", isFullPage: true },
       { url: "/quantrax/reports.png", caption: "Financial Reports" },
       { url: "/quantrax/compliance.png", caption: "Compliance Logs" }
     ],
@@ -167,7 +168,7 @@ export const projectsData: ProjectData[] = [
     tags: ["Java 17", "Spring Boot", "Angular", "PostgreSQL", "Swagger"],
     heroImage: "/alpha/hero.png",
     images: [
-      { url: "/alpha/pos.png", caption: "POS Interface" },
+      { url: "/alpha/pos.png", caption: "POS Interface", isFullPage: true },
       { url: "/alpha/inventory.png", caption: "Inventory Management" },
       { url: "/alpha/invoice.png", caption: "Invoice Generation" }
     ],
