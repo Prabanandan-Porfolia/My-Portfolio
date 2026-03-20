@@ -20,6 +20,11 @@ export interface ProjectChallenge {
   solution: string;
 }
 
+export interface ProjectImage {
+  url: string;
+  caption: string;
+}
+
 export interface ProjectData {
   id: string;
   title: string;
@@ -29,7 +34,7 @@ export interface ProjectData {
   fullDescription: string;
   tags: string[];
   heroImage: string;
-  images: string[];
+  images: ProjectImage[];
   githubUrl?: string;
   liveUrl?: string;
   highlights: string[];
@@ -51,8 +56,8 @@ export const projectsData: ProjectData[] = [
     tags: ["Java", "Spring Boot", "Microservices", "Kafka", "MySQL", "Docker"],
     heroImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
     images: [
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800"
+      { url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800", caption: "Main Dashboard" },
+      { url: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800", caption: "Analytics View" }
     ],
     highlights: [
       "Distributed microservices architecture for high availability",
@@ -87,7 +92,7 @@ export const projectsData: ProjectData[] = [
     tags: ["Java", "Spring Boot", "MongoDB", "JWT", "REST API", "Angular"],
     heroImage: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=1200",
     images: [
-      "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=800"
+      { url: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=800", caption: "Candidate Pipeline" }
     ],
     highlights: [
       "Automated candidate screening and ranking",
@@ -122,7 +127,7 @@ export const projectsData: ProjectData[] = [
     tags: ["Java", "Spring Boot", "Docker", "MySQL", "Monolithic"],
     heroImage: "https://images.unsplash.com/photo-1611974717484-3874407defd1?auto=format&fit=crop&q=80&w=1200",
     images: [
-      "https://images.unsplash.com/photo-1611974717484-3874407defd1?auto=format&fit=crop&q=80&w=800"
+      { url: "https://images.unsplash.com/photo-1611974717484-3874407defd1?auto=format&fit=crop&q=80&w=800", caption: "Workflow Automation" }
     ],
     highlights: [
       "Automated debt recovery workflows",
@@ -157,7 +162,7 @@ export const projectsData: ProjectData[] = [
     tags: ["Java 17", "Spring Boot", "Angular", "PostgreSQL", "Swagger"],
     heroImage: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=1200",
     images: [
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=800"
+      { url: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=800", caption: "POS Interface" }
     ],
     highlights: [
       "Real-time inventory tracking for printing supplies",

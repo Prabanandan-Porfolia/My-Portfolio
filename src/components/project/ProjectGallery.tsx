@@ -8,9 +8,10 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { ProjectImage } from '@/data/projects';
 
 interface ProjectGalleryProps {
-  images: string[];
+  images: ProjectImage[];
 }
 
 const ProjectGallery = ({ images }: ProjectGalleryProps) => {
@@ -20,13 +21,18 @@ const ProjectGallery = ({ images }: ProjectGalleryProps) => {
         <CarouselContent>
           {images.map((image, index) => (
             <CarouselItem key={index}>
-              <div className="p-1">
+              <div className="p-1 space-y-4">
                 <div className="relative aspect-video rounded-2xl overflow-hidden border border-border/50 shadow-lg">
                   <img 
-                    src={image} 
-                    alt={`Screenshot ${index + 1}`} 
+                    src={image.url} 
+                    alt={image.caption} 
                     className="w-full h-full object-cover"
                   />
+                </div>
+                <div className="text-center">
+                  <p className="text-sm font-medium text-orange-600 uppercase tracking-wider">
+                    {image.caption}
+                  </p>
                 </div>
               </div>
             </CarouselItem>
