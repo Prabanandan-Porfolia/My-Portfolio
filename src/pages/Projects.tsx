@@ -46,25 +46,17 @@ const Projects = () => {
                         <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                       </div>
                       
-                      <CardHeader className="space-y-4">
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center gap-3">
-                            <div className="w-10 h-10 rounded-xl bg-accent/50 p-1.5 border border-border/50 shrink-0">
-                              <img src={project.logo} alt="" className="w-full h-full object-contain" />
-                            </div>
-                            <Badge variant="outline" className="bg-orange-600/10 text-orange-600 border-orange-600/20 rounded-full px-3 py-0.5 text-[10px] uppercase tracking-wider font-bold">
-                              {project.category}
-                            </Badge>
-                          </div>
-                        </div>
-                        
-                        <div className="space-y-2">
+                      <CardHeader className="flex-row items-start justify-between gap-4 space-y-0 pb-2">
+                        <div className="space-y-2 flex-1">
                           <CardTitle className="text-2xl font-bold group-hover:text-orange-600 transition-colors">
                             {project.title}
                           </CardTitle>
                           <CardDescription className="text-base leading-relaxed line-clamp-2">
                             {project.shortDescription}
                           </CardDescription>
+                        </div>
+                        <div className="w-12 h-12 rounded-xl bg-accent/50 p-2 border border-border/50 shrink-0 mt-1">
+                          <img src={project.logo} alt="" className="w-full h-full object-contain" />
                         </div>
                       </CardHeader>
 
