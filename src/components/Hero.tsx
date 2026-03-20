@@ -32,11 +32,11 @@ const Hero = () => {
               </h1>
               <div className="space-y-2">
                 <h2 className="text-4xl md:text-6xl font-black text-orange-600 tracking-tighter leading-none uppercase">
-                  Senior Backend
+                  SOFTWARE ENGINEER
                 </h2>
                 <div className="relative inline-block">
                   <h2 className="text-5xl md:text-7xl font-black text-foreground tracking-tighter leading-none uppercase">
-                    Architect
+                    JAVA
                   </h2>
                   <div className="absolute -bottom-1 left-0 w-full h-3 bg-orange-600/20 rounded-full -z-10" />
                 </div>
@@ -80,7 +80,7 @@ const Hero = () => {
                 </Button>
               </Link>
               <Button variant="outline" className="rounded-xl px-8 py-6 text-lg font-bold border-2 border-muted-foreground/20 hover:bg-accent bg-transparent transition-all hover:border-orange-600/50">
-                Download Portfolio
+                Download CV
               </Button>
             </div>
           </motion.div>
@@ -95,7 +95,7 @@ const Hero = () => {
               <div className="absolute inset-0 bg-accent/20 rounded-full scale-95 animate-pulse" />
               <div className="absolute inset-0 flex items-center justify-center overflow-hidden rounded-full border-8 border-accent/30 shadow-2xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800" 
+                  src={`${import.meta.env.BASE_URL}dp.avif`}
                   alt="Prabanandan Anandhamurugan"
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 z-10"
                 />
