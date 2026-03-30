@@ -55,9 +55,9 @@ const Projects = () => {
                             {project.shortDescription}
                           </CardDescription>
                         </div>
-                        <div className="w-12 h-12 rounded-xl bg-accent/50 p-2 border border-border/50 shrink-0 mt-1">
+                        {/* <div className="w-12 h-12 rounded-xl bg-accent/50 p-2 border border-border/50 shrink-0 mt-1">
                           <img src={project.logo} alt="" className="w-full h-full object-contain" />
-                        </div>
+                        </div> */}
                       </CardHeader>
 
                       <CardContent className="space-y-6 mt-auto">

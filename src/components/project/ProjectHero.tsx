@@ -49,11 +49,11 @@ const ProjectHero = ({ title, logo, description, tags }: ProjectHeroProps) => {
           >
             <div className="relative w-64 h-64 md:w-80 md:h-80">
               <div className="absolute inset-0 bg-orange-600/10 rounded-full scale-105 animate-pulse" />
-              <div className="absolute inset-0 flex items-center justify-center overflow-hidden rounded-full border-4 border-accent/50 shadow-2xl bg-card p-8">
+              <div className="absolute inset-0 flex items-center justify-center rounded-full border-4 border-accent/50 shadow-2xl bg-card overflow-hidden">
                 <img 
                   src={logo} 
                   alt={`${title} logo`} 
-                  className="w-full h-full object-contain transition-transform duration-700 hover:scale-110"
+                  className="w-full h-full object-cover rounded-full"
                 />
               </div>
             </div>

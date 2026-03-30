@@ -87,12 +87,12 @@ export const projectsData: ProjectData[] = [
   {
     id: "talentbase",
     title: "TalentBase",
-    logo: "/talentbase/logo.png",
+    logo: `${import.meta.env.BASE_URL}/talent/image.png`,
     category: "HR Tech",
     shortDescription: "A modern recruitment platform designed to streamline the hiring process.",
     fullDescription: "TalentBase is an end-to-end recruitment management system that helps organizations track candidates, manage interviews, and automate the hiring workflow.",
     tags: ["Java", "Spring Boot", "MongoDB", "JWT", "REST API", "Angular"],
-    heroImage: "/talentbase/hero.png",
+    heroImage: `${import.meta.env.BASE_URL}/talent/image.png`,
     images: [
       { url: "/talentbase/pipeline.png", caption: "Candidate Pipeline", isFullPage: true },
       { url: "/talentbase/scheduler.png", caption: "Interview Scheduler" },
@@ -124,16 +124,16 @@ export const projectsData: ProjectData[] = [
   {
     id: "quantrax",
     title: "Quantrax",
-    logo: `${import.meta.env.BASE_URL}/quantrax/logo1.avif`,
+    logo: `${import.meta.env.BASE_URL}/quantrax/logo.avif`,
     category: "FinTech",
     shortDescription: "Financial software domain application focusing on workflow automation.",
     fullDescription: "Quantrax is a specialized financial tool designed for debt collection and recovery management, focusing on automating complex workflows.",
     tags: ["Java", "Spring Boot", "Docker", "MySQL", "Monolithic"],
-    heroImage: "/quantrax/hero.png",
+    heroImage: `${import.meta.env.BASE_URL}/quantrax/hero-logo.avif`,
     images: [
-      { url: `${import.meta.env.BASE_URL}/alpha/login.avif`, caption: "POS Interface", isFullPage: true },,
-      { url: "/quantrax/reports.png", caption: "Financial Reports" },
-      { url: "/quantrax/compliance.png", caption: "Compliance Logs" }
+      { url: `${import.meta.env.BASE_URL}/quantrax/hero.avif`, caption: "POS Interface", isFullPage: true },
+      { url: `${import.meta.env.BASE_URL}/quantrax/Landing.avif`, caption: "Admin Panel", isFullPage: true },
+      { url: `${import.meta.env.BASE_URL}/quantrax/resources.avif`, caption: "Resource Page", isFullPage: true }
     ],
     highlights: [
       "Automated debt recovery workflows",
