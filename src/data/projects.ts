@@ -124,7 +124,7 @@ export const projectsData: ProjectData[] = [
   {
     id: "quantrax",
     title: "Quantrax",
-    logo: `${import.meta.env.BASE_URL}/quantrax/logo.avif`,
+    logo: `${import.meta.env.BASE_URL}/quantrax/qlogo.avif`,
     category: "FinTech",
     shortDescription: "Financial software domain application focusing on workflow automation.",
     fullDescription: "Quantrax is a specialized financial tool designed for debt collection and recovery management, focusing on automating complex workflows.",
@@ -162,10 +162,10 @@ export const projectsData: ProjectData[] = [
     id: "alpha-printers-pos",
     title: "Alpha Printers POS System",
     logo: `${import.meta.env.BASE_URL}/alpha/logo.avif`,
-    category: "Business Management",
-    shortDescription: "Complete POS and management system for a printing business.",
-    fullDescription: "A custom-built Point of Sale and inventory management system tailored for the specific needs of a high-volume printing shop.",
-    tags: ["Java 17", "Spring Boot", "Angular", "PostgreSQL", "Swagger"],
+    category: "Enterprise Business Solution",
+    shortDescription: "A full-featured POS and business management system designed for high-volume printing operations.",
+    fullDescription: "Designed and developed a comprehensive monolithic Point of Sale (POS) and business management system tailored for a high-demand printing environment. The system streamlines end-to-end operations including customer management, inventory tracking, vendor coordination, sales, and purchasing workflows. Built with a secure Spring Boot backend and Angular frontend, the application ensures high performance, scalability, and secure access control using JWT-based authentication.",
+    tags: ["Java 17", "Spring Boot", "Angular", "MySQL", "Swagger"],
     heroImage: `${import.meta.env.BASE_URL}/alpha/logo.avif`,
     images: [
      { url: `${import.meta.env.BASE_URL}/alpha/login.avif`, caption: "Log-In", isFullPage: false },
@@ -174,26 +174,35 @@ export const projectsData: ProjectData[] = [
       { url: `${import.meta.env.BASE_URL}/alpha/reports.avif`, caption: "Reports Generation", isFullPage: false } 
     ],
     highlights: [
-      "Real-time inventory tracking for printing supplies",
-      "Integrated customer relationship management (CRM)",
-      "Automated invoice generation and tax calculation"
-    ],
-    architecture: "Full-stack application with a Spring Boot backend and an Angular frontend.",
+    "Real-time inventory tracking with automated low-stock alerts",
+    "Comprehensive due payment tracking and pending invoice monitoring",
+    "Customizable report generation based on user-defined fields",
+    "Secure API access using JWT-based authentication and authorization",
+    "Role-based access control supporting Admin and User levels"
+  ],
+    architecture: "Monolithic full-stack architecture using Spring Boot for backend services and Angular for frontend, secured with Spring Security and JWT authentication.",
     features: [
-      { title: "Inventory", description: "Stock level alerts and tracking.", icon: Database },
-      { title: "POS", description: "Fast and intuitive checkout process.", icon: Zap },
-      { title: "CRM", description: "Customer history and loyalty tracking.", icon: Users }
+      { title: "Inventory Management", description: "Real-time stock tracking with automated alerts for low inventory levels.", icon: Database },
+      { title: "Point of Sale (POS)", description: "Efficient billing system with invoice generation and tax handling.", icon: Zap },
+      { title: "Customer & Vendor Management", description: "Centralized management of customers and suppliers with transaction history.", icon: Users },
+      { title: "Security & Access Control",description: "JWT-based authentication with role-based authorization ensuring secure system access.", icon: Shield }
     ],
     challenges: [
       { 
-        problem: "Complex pricing logic based on print volume and material.", 
-        solution: "Developed a flexible pricing engine that calculates costs dynamically." 
-      }
+      problem: "Handling complex pricing logic based on print type, material, and volume.", 
+      solution: "Implemented a dynamic pricing engine capable of calculating costs based on configurable parameters and business rules." 
+    },
+    { 
+      problem: "Ensuring secure communication across all API endpoints.", 
+      solution: "Integrated Spring Security with JWT tokens, enforcing authentication and authorization for every request." 
+    }
     ],
-    contribution: "I was the sole developer for this project, responsible for the entire lifecycle.",
+    contribution: "Sole developer responsible for system design, architecture, backend and frontend development, database design, and deployment.",
     futureImprovements: [
-      "Online order portal for customers",
-      "Integration with shipping providers"
+      "Customer-facing online order and tracking portal",
+      "Integration with third-party shipping and delivery services",
+      "Advanced analytics dashboard with business insights",
+      "Migration to microservices architecture for scalability"
     ]
   }
 ];
