@@ -50,16 +50,19 @@ export const projectsData: ProjectData[] = [
   {
     id: "eilyai-enterprise",
     title: "EilyAI Enterprise Solution",
-    logo: "/eily/logo.png",
+    logo: `${import.meta.env.BASE_URL}/eily/Capture.PNG`,
     category: "Enterprise Software",
     shortDescription: "A comprehensive enterprise solution system built with microservices architecture.",
     fullDescription: "EilyAI is a high-performance enterprise platform designed to handle complex business operations through a distributed microservices architecture. It focuses on real-time data processing and seamless service communication.",
     tags: ["Java", "Spring Boot", "Microservices", "Kafka", "MySQL", "Docker"],
-    heroImage: "/eily/hero.png",
+    heroImage: `${import.meta.env.BASE_URL}/eily/ehero.avif`,
     images: [
-      { url: "/eily/dashboard.png", caption: "Main Dashboard", isFullPage: true },
-      { url: "/eily/analytics.png", caption: "Analytics View" },
-      { url: "/eily/monitoring.png", caption: "System Monitoring" }
+      { url: `${import.meta.env.BASE_URL}/eily/ehome.avif`, caption: "Home Page", isFullPage: false },
+      { url: `${import.meta.env.BASE_URL}/eily/egrid.avif`, caption: "Grid-View", isFullPage: false },
+      { url: `${import.meta.env.BASE_URL}/eily/elist.avif`, caption: "List-View", isFullPage: false },
+      { url: `${import.meta.env.BASE_URL}/eily/eform.avif`, caption: "Creation Form", isFullPage: false },
+      { url: `${import.meta.env.BASE_URL}/eily/esale.avif`, caption: "Sales-Board", isFullPage: false },
+      { url: `${import.meta.env.BASE_URL}/eily/epay.avif`, caption: "Payment-Gateway", isFullPage: true },
     ],
     highlights: [
       "Distributed microservices architecture for high availability",
