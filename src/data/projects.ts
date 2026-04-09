@@ -97,9 +97,17 @@ export const projectsData: ProjectData[] = [
     tags: ["Java", "Spring Boot", "MongoDB", "JWT", "REST API", "Angular"],
     heroImage: `${import.meta.env.BASE_URL}/talent/image.png`,
     images: [
-      { url: "/talentbase/pipeline.png", caption: "Candidate Pipeline", isFullPage: true },
-      { url: "/talentbase/scheduler.png", caption: "Interview Scheduler" },
-      { url: "/talentbase/collaboration.png", caption: "Team Collaboration" }
+      { url: `${import.meta.env.BASE_URL}/talent/Landing.svg`, caption: "Home Page", isFullPage: true },
+      { url: `${import.meta.env.BASE_URL}/talent/Sign in.svg`, caption: "Sign In Page", isFullPage: false },
+      { url: `${import.meta.env.BASE_URL}/talent/user type.svg`, caption: "Portal Selection", isFullPage: false },
+      { url: `${import.meta.env.BASE_URL}/talent/Create user.svg`, caption: "Employer Profile Creation", isFullPage: false },
+      { url: `${import.meta.env.BASE_URL}/talent/Create user com.svg`, caption: "Employee Profile Creation", isFullPage: false },
+      { url: `${import.meta.env.BASE_URL}/talent/Dashboard.svg`, caption: "Employee Portal", isFullPage: false },
+      { url: `${import.meta.env.BASE_URL}/talent/Profile - personal info.svg`, caption: "Employer Portal", isFullPage: false },
+      { url: `${import.meta.env.BASE_URL}/talent/Profile - Jobs.svg`, caption: "Job Portal", isFullPage: false },
+      { url: `${import.meta.env.BASE_URL}/talent/Favorites.svg`, caption: "Employee Interests", isFullPage: false },
+      { url: `${import.meta.env.BASE_URL}/talent/Architecture.svg`, caption: "Architecture View", isFullPage: false },
+
     ],
     highlights: [
       "Automated candidate screening and ranking",
