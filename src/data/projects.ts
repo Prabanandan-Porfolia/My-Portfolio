@@ -50,42 +50,60 @@ export const projectsData: ProjectData[] = [
   {
     id: "eilyai-enterprise",
     title: "EilyAI Enterprise Solution",
-    logo: `${import.meta.env.BASE_URL}/eily/Capture.PNG`,
+    logo: `${import.meta.env.BASE_URL}/eily/elog.jpg`,
     category: "Enterprise Software",
     shortDescription: "A comprehensive enterprise solution system built with microservices architecture.",
-    fullDescription: "EilyAI is a high-performance enterprise platform designed to handle complex business operations through a distributed microservices architecture. It focuses on real-time data processing and seamless service communication.",
-    tags: ["Java", "Spring Boot", "Microservices", "Kafka", "MySQL", "Docker"],
-    heroImage: `${import.meta.env.BASE_URL}/eily/ehero.avif`,
+    fullDescription: "EilyAI is a cloud-based, multi-tenant enterprise platform built using a microservices architecture. Delivered as a SaaS solution, it allows businesses to access and subscribe to services via a web interface without local deployment. The platform supports real-time processing and event-driven communication, forming the foundation for a scalable ERP system with planned modules such as HRM, inventory management, accounting, and procurement",
+    tags: ["Java 25","Spring Boot","Spring WebFlux","Microservices Architecture","Reactive Programming(Mono/Flux)","REST APIs",
+            "Spring Security","JWT Authentication", "Role-Based Access Control (RBAC)","PostgreSQL", "Spring Data JPA","Multi-Tenancy",
+            "Data Encryption","CI/CD Pipelines", "Validation & Exception Handling","Git"],
+    heroImage: `${import.meta.env.BASE_URL}/eily/ehero.webp`,
     images: [
+      { url: `${import.meta.env.BASE_URL}/eily/login.avif`, caption: "Home Page", isFullPage: false },
       { url: `${import.meta.env.BASE_URL}/eily/ehome.avif`, caption: "Home Page", isFullPage: false },
       { url: `${import.meta.env.BASE_URL}/eily/egrid.avif`, caption: "Grid-View", isFullPage: false },
       { url: `${import.meta.env.BASE_URL}/eily/elist.avif`, caption: "List-View", isFullPage: false },
-      { url: `${import.meta.env.BASE_URL}/eily/eform.avif`, caption: "Creation Form", isFullPage: false },
+      { url: `${import.meta.env.BASE_URL}/eily/user-creation.avif`, caption: "Creation Form", isFullPage: false },
       { url: `${import.meta.env.BASE_URL}/eily/esale.avif`, caption: "Sales-Board", isFullPage: false },
-      { url: `${import.meta.env.BASE_URL}/eily/epay.avif`, caption: "Payment-Gateway", isFullPage: true },
+      { url: `${import.meta.env.BASE_URL}/eily/payment.avif`, caption: "Payment-Gateway", isFullPage: false },
     ],
     highlights: [
-      "Distributed microservices architecture for high availability",
-      "Real-time event streaming using Apache Kafka",
-      "Centralized configuration and service discovery"
+      "Distributed microservices architecture ensuring high availability and scalability",
+      "Real-time event streaming and asynchronous communication using Apache Kafka",
+      "Centralized configuration management and service discovery",
+      "Cloud-based SaaS platform with multi-platform support (web, tablet, and mobile)",
+      "Multi-tenant architecture enabling multiple branches to operate within a single unified system",
+      "Cross-branch data synchronization for seamless company-wide operations",
+      "Optimized for tablet and mobile usage, improving cashier efficiency and sales speed",
+      "Fast and intuitive navigation designed to reduce transaction time and enhance user productivity"
     ],
-    architecture: "The system follows a hexagonal architecture pattern within each microservice. Communication is handled via a combination of REST for synchronous calls and Kafka for asynchronous event-driven workflows.",
+    architecture: "The system uses a hexagonal architecture within each microservice, ensuring clear separation of concerns. Services communicate via REST for synchronous calls and Apache Kafka for event-driven workflows. Service discovery is handled באמצעות Consul, enabling dynamic service registration and scalable, resilient communication.",
     features: [
       { title: "Microservices", description: "Decoupled services for independent scaling.", icon: Cpu },
       { title: "Event Streaming", description: "Real-time data processing with Kafka.", icon: Zap },
-      { title: "Secure Gateway", description: "Centralized security and routing.", icon: Shield }
+      { title: "Secure Gateway", description: "Centralized API gateway with JWT authentication.", icon: Shield },
+      { title: "Multi-Tenancy", description: "Support for multiple branches in a single system.", icon: Users },
+      { title: "Cloud-Based SaaS", description: "Accessible from anywhere with multi-platform support.", icon: Server },
+      { title: "Optimized UI/UX", description: "Designed for speed and efficiency in high-volume sales environments.", icon: Workflow },
+      { title: "Comprehensive ERP Modules", description: "Planned modules include HRM, inventory management, accounting, and procurement.", icon: BarChart3 }
     ],
     challenges: [
-      { 
-        problem: "Managing data consistency across multiple distributed services.", 
-        solution: "Implemented the Saga pattern for distributed transactions and eventual consistency." 
-      }
-    ],
-    contribution: "I led the backend development of the core services, focusing on the Kafka integration and the implementation of the security layer.",
-    futureImprovements: [
-      "Implementation of GraphQL for more flexible data querying",
-      "Enhanced monitoring with Prometheus and Grafana"
-    ]
+  {
+    problem: "Data inconsistencies occurred due to partial failures in distributed transactions across services.",
+    solution: "Implemented the Saga pattern using Kafka to handle event-driven workflows, with retry mechanisms and compensation logic to maintain eventual consistency."
+  },
+  {
+    problem: "Service-to-service communication failures (timeouts / service downtime) affected user-facing operations.",
+    solution: "Applied resilience patterns such as retries and circuit breakers, and shifted critical flows to asynchronous Kafka processing."
+  }
+],
+contribution: "Led backend development of core services, designed Kafka-based event flows, implemented Saga orchestration, and built secure APIs using Spring Security with JWT.",
+futureImprovements: [
+  "Introduce GraphQL to reduce over-fetching and improve client flexibility",
+  "Enhance observability with distributed tracing (e.g., Zipkin/OpenTelemetry)",
+  "Optimize Kafka topic partitioning and scaling for higher throughput",
+  "Implement centralized configuration and service discovery (Consul) for better scalability"
+]
   },
   {
     id: "talentbase",

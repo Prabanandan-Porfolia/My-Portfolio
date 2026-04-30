@@ -62,20 +62,22 @@ const ProjectDetail = () => {
                 <p>{project.fullDescription}</p>
               </ProjectSection>
               
-              <ProjectSection title="Highlights" icon={CheckCircle2}>
-                <ul className="space-y-3">
-                  {project.highlights.map((item, i) => (
-                    <li key={i} className="text-sm flex gap-2">
-                      <div className="w-1.5 h-1.5 rounded-full bg-orange-500 mt-1.5 shrink-0" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+              {/* Architecture moved into the grid */}
+              <ProjectSection title="Architecture & Technical Details" icon={Cpu}>
+                <p className="text-sm leading-relaxed">{project.architecture}</p>
               </ProjectSection>
             </div>
 
-            <ProjectSection title="Architecture & Technical Details" icon={Cpu}>
-              <p>{project.architecture}</p>
+            {/* Highlights moved below the grid and styled for full width */}
+            <ProjectSection title="Highlights" icon={CheckCircle2}>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {project.highlights.map((item, i) => (
+                  <li key={i} className="text-sm flex gap-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-orange-500 mt-1.5 shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </ProjectSection>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
